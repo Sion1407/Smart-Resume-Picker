@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:mysql://localhost:3306/onlineapplicationselector?useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+#      show-sql: true
+      properties:
+        dialect: org.hibernate.dialect.MySQLDialect
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+server:
+  port: 8088
+logging:
+  level:
+    org.hibernate: DEBUG
+    org.hibernate.SQL: DEBUG
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          okta:
+#            client-id: your-client-id
+#            client-secret: your-client-secret
+#            scope: openid, profile, email
+#            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+#            authorization-grant-type: authorization_code
+#            client-name: Okta
+#        provider:
+#          okta:
+#            authorization-uri: https://{yourOktaDomain}/oauth2/default/v1/authorize
+#            token-uri: https://{yourOktaDomain}/oauth2/default/v1/token
+#            user-info-uri: https://{yourOktaDomain}/oauth2/default/v1/userinfo
+#            jwk-set-uri: https://{yourOktaDomain}/oauth2/default/v1/keys
